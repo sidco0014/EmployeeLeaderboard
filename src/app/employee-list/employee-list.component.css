@@ -1,0 +1,26 @@
+.employee--list {
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+}
+
+.employee--list {
+  margin-top: 40px;
+}
+
+.employee--list p {
+  color: #0f559a;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.employee--list li {
+  margin-bottom: 15px;
+}
+
+.employee--list li a {
+  color: #0f559a;
+  font-size: 1.2em;
+  line-height: 2.5em;
+  font-weight: 600;
+}

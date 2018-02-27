@@ -1,0 +1,34 @@
+
+.employee--details {
+  margin-top: 40px;
+}
+
+.employee--details .detail--text {
+  color: #0f559a;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.employee--info p {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.employee--info a {
+  color: #173754;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.employee--info a:hover {
+  color: #0f559a;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+
+.employee--info .heading {
+  color: #0f559a;
+  font-weight: 600;
+  font-size: 1.2rem;
+}

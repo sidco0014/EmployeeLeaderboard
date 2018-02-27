@@ -1,0 +1,28 @@
+header {
+  height: 115px;
+  background-color: #173754;
+  padding: 10px;
+}
+.nav--wrapper {
+  text-align: center;
+  width: 100%;
+}
+.main--nav {
+  list-style: none;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.main--nav li {
+  font-size: 1.8rem;
+  font-weight: 600;
+  float: left;
+  margin-left: 20px;
+}
+
+.main--nav li a {
+  color: white;
+  transition: all 0.3s ease-in-out;
+  padding-right: 20px;
+}
+

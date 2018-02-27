@@ -1,0 +1,9 @@
+
+<ul class="employee--list">
+    <p>Employee List:</p>
+    <hr>
+    <li *ngFor ='let employee of employeeList'>
+      <a routerLink="/detail/{{employee.id}}">{{ employee.name }}</a>
+    </li>
+ </ul>
+

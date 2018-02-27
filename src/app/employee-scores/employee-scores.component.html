@@ -1,0 +1,13 @@
+<div class="employee--details">
+  <p class="detail--text">{{ employee.name }}'s Score Distribution</p>
+  <div style="width: 60%;">
+    <canvas
+      baseChart
+      [chartType]="'line'"
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+      [legend]="false">
+    </canvas>
+  </div>
+</div>

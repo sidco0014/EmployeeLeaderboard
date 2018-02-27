@@ -1,0 +1,29 @@
+.employee--details {
+  margin-top: 40px;
+}
+
+.employee--details .detail--text {
+  color: #0f559a;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.table td {
+  border-top: 0;
+}
+
+.leaderboard--table thead td {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding-right: 20px;
+}
+
+.leaderboard--table tbody td {
+  color: #0f559a;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.margin--top {
+  margin-top: 40px;
+}

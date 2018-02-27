@@ -1,0 +1,10 @@
+.employee--details {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.employee--details .detail--text {
+  color: #0f559a;
+  font-weight: 600;
+  font-size: 2rem;
+}

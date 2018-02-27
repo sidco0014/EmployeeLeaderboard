@@ -1,0 +1,16 @@
+<div *ngIf ="employee" class="employee--details">
+  <p class="detail--text">Employee Details</p>
+  <hr>
+  <div class="employee--info">
+    <p class="heading">Employee ID :</p>
+    <p> {{ employee.id }}</p>
+    <hr>
+
+    <p class="heading" >Employee Name :</p>
+    <p> {{ employee.name }}</p>
+    <hr>
+
+    <p class="heading">Score distribution :</p>
+    <p><a a routerLink="/score/{{employee.id}}">Check here</a></p>
+  </div>
+</div>

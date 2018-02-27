@@ -1,0 +1,33 @@
+<div class="employee--details">
+  <p class="detail--text">Leaderboard</p>
+  <hr>
+  <table class="table table-striped leaderboard--table">
+    <thead>
+    <tr>
+      <td>#</td>
+      <td>Name</td>
+      <td>Score</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let employee of employeeScoreDict; let i = index">
+      <td> {{ i+1 }}</td>
+      <td> {{ employee.name }}</td>
+      <td> {{ employee.percentScore }}%</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <p class="detail--text margin--top">Graphical Representation of Leaderboard</p>
+  <br>
+  <div>
+    <canvas
+      baseChart
+      [chartType]="'line'"
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      [options]="chartOptions"
+      [legend]="false">
+    </canvas>
+  </div>
+</div>
