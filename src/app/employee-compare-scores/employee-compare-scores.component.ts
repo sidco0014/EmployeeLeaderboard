@@ -39,6 +39,10 @@ export class EmployeeCompareScoresComponent implements OnInit {
     });
   }
 
+  clearForm(){
+    location.reload();
+  }
+
   getEmployeeList(){
     this.EmployeeService.getEmployees().subscribe(employee => this.employeeList =  employee);
     return this.employeeList
@@ -94,6 +98,7 @@ export class EmployeeCompareScoresComponent implements OnInit {
         employeeTwoName = this.employeeList[i].name;
       }
     }
+
     this.chartLabels = ['I', 'II', 'III', 'IV', 'V'];
     this.chartData.push(
       {'data' : employeeOneScoreList, label: employeeOneName},
