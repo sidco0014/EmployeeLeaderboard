@@ -21,6 +21,7 @@ export class EmployeeCompareScoresComponent implements OnInit {
     responsive: true
   };
   chartLabels =[];
+  ChartReady = false;
 
   ngOnInit() {
     this.getEmployeeList();
@@ -60,6 +61,7 @@ export class EmployeeCompareScoresComponent implements OnInit {
     }
     else {
       this.calculateScoreComparator(employeeOneId, employeeTwoId);
+      this.ChartReady = true;
     }
   }
 

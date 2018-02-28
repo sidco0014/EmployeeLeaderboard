@@ -65,6 +65,9 @@ select {
   font-style: italic;
 }
 
-.compare--wrapper {
-
+.compare--wrapper canvas {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
 }

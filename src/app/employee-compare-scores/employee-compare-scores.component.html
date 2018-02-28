@@ -44,16 +44,16 @@
     </div>
   </form>
 
-  <!--<div class="compare&#45;&#45;wrapper">-->
-    <!--<div style="width: 60%;" >-->
-      <!--<canvas-->
-        <!--baseChart-->
-        <!--[chartType]="'line'"-->
-        <!--[datasets]="chartData"-->
-        <!--[labels]="chartLabels"-->
-        <!--[options]="chartOptions"-->
-        <!--[legend]="true">-->
-      <!--</canvas>-->
-    <!--</div>-->
-  <!--</div>-->
+  <div class="compare--wrapper">
+    <div style="width: 80%;" >
+      <canvas *ngIf="ChartReady"
+        baseChart
+        [chartType]="'line'"
+        [datasets]="chartData"
+        [labels]="chartLabels"
+        [options]="chartOptions"
+        [legend]="true">
+      </canvas>
+    </div>
+  </div>
 </div>
