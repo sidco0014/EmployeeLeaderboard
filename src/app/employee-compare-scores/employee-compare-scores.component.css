@@ -27,6 +27,12 @@ select {
   text-align: center;
 }
 
+.btn-primary[type='submit']:disabled{
+  background-color: #ccc;
+  border: 1px solid #ccc;
+  color: black;
+}
+
 .btn-primary {
   padding: 10px;
   background-color: #173754;
@@ -56,3 +62,5 @@ select {
   color: #173754;
   font-style: italic;
 }
+
+

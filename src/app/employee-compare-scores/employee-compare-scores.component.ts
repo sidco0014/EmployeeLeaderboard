@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
-import { Employee } from '../employees';
-import {NgForm } from '@angular/forms';
+import {NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-employee-compare-scores',
@@ -15,10 +14,14 @@ export class EmployeeCompareScoresComponent implements OnInit {
   employeeList:any = [];
   selectedEmployee1Name: string = '';
   selectedEmployee2Name: string = '';
-
+  form;
 
   ngOnInit() {
     this.getEmployeeList();
+    this.form = new FormGroup({
+      employeeName1: new FormControl("", Validators.required),
+      employeeName2: new FormControl("", Validators.required),
+    });
   }
 
   getEmployeeList(){
@@ -27,10 +30,10 @@ export class EmployeeCompareScoresComponent implements OnInit {
     return this.employeeList
   }
 
+  //Form Submit method to get the input values
   onSubmit(formData) {
     console.log(formData)
   }
-
 
   selectChangedHandler1(event: any) {
     for(let i=0; i<this.employeeList.length; i++){

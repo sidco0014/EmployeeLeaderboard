@@ -1,9 +1,9 @@
 <div class="employee--details">
-  <p class="detail--text">Compare Employee Scores </p>
-  <hr>
+    <p class="detail--text">Compare Employee Scores </p>
+    <hr>
     <form class="form-group"
-          #employeeForm = "ngForm"
-          (ngSubmit) = "onSubmit(employeeForm.value)">
+          [formGroup] = "form"
+          (ngSubmit) = "onSubmit(form.value)">
 
       <div class="row">
         <div class="col-lg-6">
@@ -12,7 +12,8 @@
                     id="namelist-1"
                     (change)="selectChangedHandler1($event);"
                     ngModel
-                    name="employeeID1">
+                    name="employeeID1"
+                    formControlName="employeeName1">
 
               <option *ngFor="let employee of employeeList" [value]="employee.id">
                 {{ employee.name }}
@@ -26,8 +27,10 @@
             <select class="form-control"
                     id="namelist-2"
                     (change)="selectChangedHandler2($event);"
-                     ngModel
-                     name="employeeID2" >
+                    ngModel
+                    name="employeeID2"
+                    formControlName="employeeName2">
+
               <option *ngFor="let employee of employeeList" [value]="employee.id">
                 {{ employee.name }}
               </option>
@@ -36,8 +39,9 @@
         </div>
 
         <div class="submit--button">
-          <button type="submit" class="btn btn-primary">Compare</button>
+          <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Compare</button>
         </div>
+
       </div>
     </form>
 </div>
