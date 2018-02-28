@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from '../employee.service';
 import {NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { Chart } from 'chart.js';
+import * as $ from 'jquery/dist/jquery.min.js';
 
 @Component({
   selector: 'app-employee-compare-scores',
@@ -28,6 +29,13 @@ export class EmployeeCompareScoresComponent implements OnInit {
     this.form = new FormGroup({
       employeeName1: new FormControl("", Validators.required),
       employeeName2: new FormControl("", Validators.required),
+    });
+  }
+
+  scrollFrame(){
+    $(document).ready(function () {
+      $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+      return false;
     });
   }
 
