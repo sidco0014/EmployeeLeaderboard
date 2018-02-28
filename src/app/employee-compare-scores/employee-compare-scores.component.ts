@@ -31,6 +31,7 @@ export class EmployeeCompareScoresComponent implements OnInit {
     console.log(formData)
   }
 
+
   selectChangedHandler1(event: any) {
     for(let i=0; i<this.employeeList.length; i++){
       if(this.employeeList[i].id == event.target.value){

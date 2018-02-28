@@ -3,26 +3,38 @@
   <hr>
     <form class="form-group"
           #employeeForm = "ngForm"
-          (ngSubmit) = "onsubmit(employeeForm.value)">
+          (ngSubmit) = "onSubmit(employeeForm.value)">
+
       <div class="row">
         <div class="col-lg-6">
           <label for="namelist-1" class="list--text">Select Employee Name:</label>
-            <select class="form-control" id="namelist-1" (change)="selectChangedHandler1($event);">
+            <select class="form-control"
+                    id="namelist-1"
+                    (change)="selectChangedHandler1($event);"
+                    ngModel
+                    name="employeeID1">
+
               <option *ngFor="let employee of employeeList" [value]="employee.id">
                 {{ employee.name }}
               </option>
             </select>
           <p class="selected--value"> You selected : <span>{{ selectedEmployee1Name }}</span></p>
         </div>
+
         <div class="col-lg-6">
           <label for="namelist-2" class="list--text">Select Employee Name:</label>
-            <select class="form-control" id="namelist-2" (change)="selectChangedHandler2($event);">
+            <select class="form-control"
+                    id="namelist-2"
+                    (change)="selectChangedHandler2($event);"
+                     ngModel
+                     name="employeeID2" >
               <option *ngFor="let employee of employeeList" [value]="employee.id">
                 {{ employee.name }}
               </option>
             </select>
           <p class="selected--value"> You selected : <span>{{ selectedEmployee2Name }}</span></p>
         </div>
+
         <div class="submit--button">
           <button type="submit" class="btn btn-primary">Compare</button>
         </div>
