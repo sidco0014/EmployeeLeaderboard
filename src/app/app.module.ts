@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
@@ -12,6 +13,7 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 
 import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { EmployeeScoresComponent } from './employee-scores/employee-scores.component';
+import { EmployeeCompareScoresComponent } from './employee-compare-scores/employee-compare-scores.component';
 
 
 @NgModule({
@@ -20,12 +22,14 @@ import { EmployeeScoresComponent } from './employee-scores/employee-scores.compo
     EmployeeListComponent,
     EmployeeLeaderboardComponent,
     EmployeeDetailsComponent,
-    EmployeeScoresComponent
+    EmployeeScoresComponent,
+    EmployeeCompareScoresComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    FormsModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]

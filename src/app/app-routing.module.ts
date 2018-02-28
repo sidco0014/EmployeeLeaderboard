@@ -5,12 +5,14 @@ import { EmployeeLeaderboardComponent }  from './employee-leaderboard/employee-l
 import { EmployeeListComponent }  from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent }  from './employee-details/employee-details.component';
 import { EmployeeScoresComponent }  from './employee-scores/employee-scores.component';
+import { EmployeeCompareScoresComponent } from './employee-compare-scores/employee-compare-scores.component'
 
 const routes: Routes = [
   { path: 'detail/:id', component: EmployeeDetailsComponent },
   { path: 'employees', component: EmployeeListComponent },
   { path: 'leaderboard', component: EmployeeLeaderboardComponent},
   { path: 'score/:id', component: EmployeeScoresComponent},
+  { path:'compare', component:EmployeeCompareScoresComponent },
 ];
 
 @NgModule({

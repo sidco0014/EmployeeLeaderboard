@@ -1,0 +1,58 @@
+.employee--details {
+  margin-top: 40px;
+}
+
+.employee--details .detail--text {
+  color: #0f559a;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.list--text {
+  color: #0f559a;
+  font-weight: 600;
+  font-size: 1.3rem;
+  padding-bottom: 10px;
+}
+
+select {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.submit--button {
+  margin-top: 30px;
+  padding-left: 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-primary {
+  padding: 10px;
+  background-color: #173754;
+  width: 200px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 0;
+  border: 1px solid #173754;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  border: 1px solid #173754;
+  color: #0f559a;
+  transition: all 0.3s ease-in-out;
+}
+
+.selected--value {
+  margin-top: 30px;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #0f559a;
+}
+
+.selected--value span {
+  color: #173754;
+  font-style: italic;
+}
