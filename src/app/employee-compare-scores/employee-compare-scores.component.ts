@@ -72,7 +72,6 @@ export class EmployeeCompareScoresComponent implements OnInit {
     if(employeeOneId === employeeTwoId) {
       alert("Cannot compare the same two people, Please choose a different employee")
     }
-
     else {
       this.chartData = [];
       this.calculateScoreComparator(employeeOneId, employeeTwoId);
