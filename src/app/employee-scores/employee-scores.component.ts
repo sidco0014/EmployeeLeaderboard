@@ -22,6 +22,8 @@ export class EmployeeScoresComponent implements OnInit {
     responsive: true
   };
   chartLabels =[];
+  percent : any ;
+  calcPercent = false;
 
   ngOnInit() {
     this.getEmployee();
@@ -45,8 +47,15 @@ export class EmployeeScoresComponent implements OnInit {
     })
   }
 
-
-
-
-
+  calculatePercentForEmployee(){
+    this.calcPercent = true;
+    let totalScore = 0;
+    for(let i=0; i<this.employee.scoreList.length; i++ ){
+      totalScore = totalScore + this.employee.scoreList[i];
+    }
+    this.percent = Math.round((totalScore / (50 * this.employee.scoreList.length))*100)
+  }
 }
+
+
+

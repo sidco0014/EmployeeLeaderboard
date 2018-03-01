@@ -8,3 +8,40 @@
   font-weight: 600;
   font-size: 2rem;
 }
+
+.calculate-percent h4 {
+  color: #0f559a;
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+}
+
+.btn-primary {
+  padding: 10px;
+  background-color: #173754;
+  width: 200px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid #173754;
+  border-radius: 2px;
+}
+
+.btn-primary:hover {
+  background-color: white;
+  border: 1px solid #173754;
+  color: #0f559a;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+.calculate-percent .percent--text {
+  margin-top: 10px;
+  color: #0f559a;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 5.4rem;
+}
+
+canvas {
+  border-right: 1px solid #eeeeee;
+}

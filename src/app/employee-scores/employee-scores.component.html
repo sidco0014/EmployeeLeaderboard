@@ -1,13 +1,24 @@
 <div class="employee--details">
   <p class="detail--text">{{ employee.name }}'s Score Distribution</p>
-  <div style="width: 60%;">
-    <canvas
-      baseChart
-      [chartType]="'line'"
-      [datasets]="chartData"
-      [labels]="chartLabels"
-      [options]="chartOptions"
-      [legend]="false">
-    </canvas>
+  <hr>
+  <div class="row">
+    <div class="col-lg-7">
+      <canvas
+        baseChart
+        [chartType]="'pie'"
+        [datasets]="chartData"
+        [labels]="chartLabels"
+        [options]="chartOptions"
+        [legend]="true">
+      </canvas>
+    </div>
+
+    <div class="col-lg-5">
+      <div class="calculate-percent">
+        <h4>Calculate Percentage for the 5 rounds</h4>
+        <button class="btn btn-primary" type="button" (click)="calculatePercentForEmployee()">Calculate</button>
+        <p *ngIf="calcPercent" class="percent--text">{{ percent }}%</p>
+      </div>
+    </div>
   </div>
 </div>
