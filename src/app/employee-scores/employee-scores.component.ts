@@ -40,7 +40,7 @@ export class EmployeeScoresComponent implements OnInit {
     for(let i=0; i<employee.scoreList.length; i++){
       scoreForEmployee.push(employee.scoreList[i]);
     }
-    let roundForEmployee = ['I', 'II', 'III', 'IV', 'V'];
+    let roundForEmployee = ['Q1', 'Q3', 'Q3', 'Q4'];
     this.chartLabels = roundForEmployee;
     this.chartData.push({
       'data' : scoreForEmployee,

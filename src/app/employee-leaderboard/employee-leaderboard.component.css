@@ -27,3 +27,13 @@
 .margin--top {
   margin-top: 40px;
 }
+
+.align--center {
+  text-align: center;
+}
+
+canvas {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

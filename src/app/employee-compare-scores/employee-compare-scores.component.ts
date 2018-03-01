@@ -66,12 +66,15 @@ export class EmployeeCompareScoresComponent implements OnInit {
 
   //Form Submit method to get the input values
   onSubmit(formData) {
+
     let employeeOneId = formData.employeeName1;
     let employeeTwoId = formData.employeeName2;
     if(employeeOneId === employeeTwoId) {
       alert("Cannot compare the same two people, Please choose a different employee")
     }
+
     else {
+      this.chartData = [];
       this.calculateScoreComparator(employeeOneId, employeeTwoId);
       this.ChartReady = true;
     }
@@ -99,7 +102,7 @@ export class EmployeeCompareScoresComponent implements OnInit {
       }
     }
 
-    this.chartLabels = ['I', 'II', 'III', 'IV', 'V'];
+    this.chartLabels = ['Q1', 'Q3', 'Q3', 'Q4'];
     this.chartData.push(
       {'data' : employeeOneScoreList, label: employeeOneName},
       {'data' : employeeTwoScoreList, label: employeeTwoName},

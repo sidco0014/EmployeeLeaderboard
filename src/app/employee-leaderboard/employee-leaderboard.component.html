@@ -6,24 +6,29 @@
     <tr>
       <td>#</td>
       <td>Name</td>
-      <td>Score</td>
+      <td>Points In Q4</td>
+      <td>All Time Points</td>
+      <td>Overall Percent</td>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let employee of employeeScoreDict; let i = index">
       <td> {{ i+1 }}</td>
       <td> {{ employee.name }}</td>
+      <td> {{ employee.lastQuarterScore }}</td>
+      <td> {{ employee.totalscore }}</td>
       <td> {{ employee.percentScore }}%</td>
+
     </tr>
     </tbody>
   </table>
 
-  <p class="detail--text margin--top">Graphical Representation of Leaderboard</p>
+  <p class="detail--text margin--top align--center">Graphical Representation of Leaderboard</p>
   <br>
-  <div>
+  <div style="width: 80%">
     <canvas
       baseChart
-      [chartType]="'line'"
+      [chartType]="'bar'"
       [datasets]="chartData"
       [labels]="chartLabels"
       [options]="chartOptions"

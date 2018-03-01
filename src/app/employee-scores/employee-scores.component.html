@@ -1,5 +1,5 @@
 <div class="employee--details">
-  <p class="detail--text">{{ employee.name }}'s Score Distribution and Percent</p>
+  <p class="detail--text">{{ employee.name }}'s Points Distribution and Percent</p>
   <hr>
   <div class="row">
     <div class="col-lg-7">
@@ -15,7 +15,7 @@
 
     <div class="col-lg-5">
       <div class="calculate-percent">
-        <h4>Calculate Percentage for the 5 rounds</h4>
+        <h4>Calculate Percentage for all 4 Quarters</h4>
         <button class="btn btn-primary" type="button" (click)="calculatePercentForEmployee()">Calculate</button>
         <p *ngIf="calcPercent" class="percent--text">{{ percent }}%</p>
       </div>

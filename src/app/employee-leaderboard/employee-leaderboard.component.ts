@@ -42,6 +42,8 @@ export class EmployeeLeaderboardComponent implements OnInit {
         this.employeeScoreDict.push({
           'name': employeeList[i].name,
           'percentScore': percentScore,
+          'totalscore':totalScore,
+          'lastQuarterScore':employeeScore[employeeScore.length-1],
         });
         this.employeeScoreDict.sort(function (a, b) {
           return  b.percentScore - a.percentScore;
@@ -55,7 +57,7 @@ export class EmployeeLeaderboardComponent implements OnInit {
       let employeeScores =[];
       for(let i=0; i<employeeNameScoreDict.length; i++){
         employeeNames.push(employeeNameScoreDict[i].name);
-        employeeScores.push(employeeNameScoreDict[i].percentScore);
+        employeeScores.push(employeeNameScoreDict[i].totalscore);
       }
       this.chartLabels = employeeNames;
       this.chartData.push({
