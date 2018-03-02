@@ -1,6 +1,7 @@
 export class Employee {
   id:number;
   name:string;
+  description:string;
   scoreList: number [];
-  score :number;
+  image:any;
 }

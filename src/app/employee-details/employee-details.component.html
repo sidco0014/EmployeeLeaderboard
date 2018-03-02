@@ -1,16 +1,25 @@
 <div *ngIf ="employee" class="employee--details">
   <p class="detail--text">Employee Details</p>
   <hr>
-  <div class="employee--info">
-    <p class="heading">Employee ID :</p>
-    <p><i>{{ employee.id }}</i></p>
-    <hr>
 
-    <p class="heading" >Employee Name :</p>
-    <p><i>{{ employee.name }}</i></p>
-    <hr>
-
-    <p class="heading">Points distribution and Percent :</p>
-    <p><a a routerLink="/score/{{employee.id}}"><i>Click here</i></a></p>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="employee--info">
+        <div class="employee--avatar">
+          <img src="../../assets/images/{{ employee.image }}">
+          <p><i><b>{{ employee.name }}</b></i></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8">
+      <p class="heading">EID :</p>
+      <p><i>{{ employee.id }}</i></p>
+      <hr>
+      <p class="heading" >Description :</p>
+      <p><i>" {{ employee.description }}"</i></p>
+      <hr>
+      <p class="heading">Points distribution and Percent :</p>
+      <p><a a routerLink="/score/{{employee.id}}"><i>Click here</i></a></p>
+    </div>
   </div>
 </div>
