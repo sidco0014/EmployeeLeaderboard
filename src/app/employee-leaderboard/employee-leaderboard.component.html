@@ -4,21 +4,18 @@
   <table class="table table-striped leaderboard--table">
     <thead>
     <tr>
-      <td>#</td>
+      <td>Rank</td>
       <td>Name</td>
       <td>Points In Q4</td>
       <td>All Time Points</td>
-      <td>Overall Percent</td>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let employee of employeeScoreDict; let i = index">
       <td> {{ i+1 }}</td>
-      <td> {{ employee.name }}</td>
+      <td> <a routerLink="/detail/{{employee.id}}">{{ employee.name }}</a></td>
       <td> {{ employee.lastQuarterScore }}</td>
       <td> {{ employee.totalscore }}</td>
-      <td> {{ employee.percentScore }}%</td>
-
     </tr>
     </tbody>
   </table>

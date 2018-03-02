@@ -40,6 +40,7 @@ export class EmployeeLeaderboardComponent implements OnInit {
       }
         var percentScore = Math.round((totalScore/((employeeScore.length) *50))*100);
         this.employeeScoreDict.push({
+          'id':employeeList[i].id,
           'name': employeeList[i].name,
           'percentScore': percentScore,
           'totalscore':totalScore,
